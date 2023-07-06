@@ -4,7 +4,7 @@
     for fahr = 0, 20, ..., 300*/
 main()
 {
-    int fahr, celsius;
+    float fahr, celsius;
     int lower, upper, step;
 
     lower = 0;
@@ -14,12 +14,12 @@ main()
     fahr = lower;
     while (fahr <= upper)
     {
-        celsius = 5 * (fahr - 32) / 9;
+        celsius = (5.0/9.0)*(fahr-32.0);
         // Each % in the first argument is paired with the corresponding second argument, third argument, etc
         // must match up properly by number and type
         // print first number of each line in a field three digits wide
         // print the second number in a field six digits wide
-        printf("%3d\t%6d\n", fahr, celsius);
+        printf("%3.0d\t%6.0d\n", fahr, celsius);
         fahr = fahr + step;
     }
 }
