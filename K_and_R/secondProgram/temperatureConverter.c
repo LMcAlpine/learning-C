@@ -15,7 +15,11 @@ main()
     while (fahr <= upper)
     {
         celsius = 5 * (fahr - 32) / 9;
-        printf("%d\t%d\n", fahr, celsius);
+        // Each % in the first argument is paired with the corresponding second argument, third argument, etc
+        // must match up properly by number and type
+        // print first number of each line in a field three digits wide
+        // print the second number in a field six digits wide
+        printf("%3d\t%6d\n", fahr, celsius);
         fahr = fahr + step;
     }
 }
